@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="coloriApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Colori Test Frontend</title>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="/bower_components/ngstorage/ngStorage.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+	<script type="text/javascript" src="/app/app.js"></script>
+	<base href="/">
+</head>
+<body>
+	<div ng-controller="MainController">
+		<h1>hello</h1>
+		<a ui-sref="login">Log in</a>
+		<a ui-sref="signup">Sign Up</a>
+		<a ui-sref="users">Users</a>
+		<a ng-show="user" href="#0" ng-click="logout()">Log out</a>
+		
+		<div ui-view></div>
+
+		<p>message:{{message}}</p>
+	</div>
+</body>
+</html>
